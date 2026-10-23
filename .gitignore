@@ -1,0 +1,31 @@
+# deps / builds
+node_modules/
+app/ios/
+app/android/
+app/.expo/
+*.log
+
+# local config
+app/.env
+.env
+
+# python
+ml/.venv/
+__pycache__/
+
+# exported models and downloaded weights (hosted separately, see ml/README.md)
+*.pte
+ml/pte/
+ml/pte_real/
+*.safetensors
+
+# test images and video renders
+ml/*.jpg
+video/*.mp4
+video/*.png
+
+# agent files
+.claude/
+CLAUDE.md
+AGENTS.md
+!app/.env.example

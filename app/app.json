@@ -1,0 +1,56 @@
+{
+  "expo": {
+    "name": "Segment Anything",
+    "slug": "sam3-phone",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nklockiewicz.sam3phone",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Segments the photo on-device.",
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true
+        },
+        "NSLocalNetworkUsageDescription": "Downloads the models from the dev machine.",
+        "NSPhotoLibraryUsageDescription": "Pick a photo to segment on-device."
+      },
+      "entitlements": {
+        "com.apple.developer.kernel.increased-memory-limit": true
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.nklockiewicz.sam3phone",
+      "permissions": [
+        "android.permission.CAMERA"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "@kesha-antonov/react-native-background-downloader",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 26
+          },
+          "ios": {
+            "deploymentTarget": "17.0",
+            "enableSceneSupport": true
+          }
+        }
+      ]
+    ]
+  }
+}
